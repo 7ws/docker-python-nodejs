@@ -1,4 +1,5 @@
-FROM python:3.6
+ARG python_tag
+FROM python:$python_tag
 
 # Install NodeJS
 RUN \

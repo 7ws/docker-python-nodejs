@@ -5,4 +5,6 @@ services:
     # Build settings
     build:
       context: ./
+      args:
+        python_tag: ${TAG:-latest}
     image: emyller/python-nodejs:${TAG:-latest}
