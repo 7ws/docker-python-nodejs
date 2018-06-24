@@ -1,0 +1,8 @@
+version: '3.6'
+services:
+
+  python-nodejs:
+    # Build settings
+    build:
+      context: ./
+    image: emyller/python-nodejs:${TAG:-latest}
