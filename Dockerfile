@@ -1,15 +1,7 @@
-FROM nfnty/arch-mini
-MAINTAINER Evandro Myller <emyller@7ws.co>
+FROM python:3.6
 
-# Update repositories and upgrade the system
-RUN pacman -Syu --noconfirm
-
-# Install base packages
-RUN pacman -S --noconfirm base-devel git
-
-# Install Python
-RUN pacman -S --noconfirm python python-pip
-
-# Install NodeJS + Bower
-RUN pacman -S --noconfirm nodejs bower
-
+# Install NodeJS
+RUN \
+    curl -sL https://deb.nodesource.com/setup_9.x | bash - && \
+    apt-get install -y nodejs &&\
+    rm -rf /var/lib/apt/lists/
