@@ -1,5 +1,4 @@
-ARG python_tag
-FROM python:$python_tag
+FROM python:3.6
 
 # Install NodeJS + yarn
 RUN \
